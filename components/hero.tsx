@@ -13,10 +13,10 @@ const roles = [
 ]
 
 const stats = [
-  { value: '2+', label: 'Years Experience' },
-  { value: '8+', label: 'Research Works' },
+  { value: '4+', label: 'Conference Publications' },
+  { value: '2+', label: 'Journal Manuscripts' },
   { value: '7+', label: 'Engineering Projects' },
-  { value: '3+', label: 'Conference Publications' },
+  { value: '1+', label: 'Years Research & Engineering Experience' },
 ]
 
 export function Hero() {

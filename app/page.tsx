@@ -2,6 +2,7 @@ import { ParticleBackground } from '@/components/particle-background'
 import { Navbar } from '@/components/navbar'
 import { Hero } from '@/components/hero'
 import { About } from '@/components/about'
+import { ResearchSummary } from '@/components/research-summary'
 import { Experience } from '@/components/experience'
 import { Publications } from '@/components/publications'
 import { Research } from '@/components/research'
@@ -20,6 +21,7 @@ export default function Page() {
       <main>
         <Hero />
         <About />
+        <ResearchSummary />
         <Experience />
         <Publications />
         <Research />
