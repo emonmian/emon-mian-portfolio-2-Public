@@ -61,11 +61,32 @@ export function About() {
                 Passionate about advancing RF systems
               </h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                I specialize in designing and simulating high-performance
-                antennas, metamaterial absorbers, and terahertz biosensors,
-                combining rigorous electromagnetic modeling with hands-on
-                hardware prototyping. My work spans from aerospace communication
-                systems to machine-learning-assisted cancer cell detection.
+                I am a graduate Electrical and Electronic Engineer from
+                Mymensingh Engineering College, University of Dhaka, with
+                research and engineering experience in RF &amp; Microwave
+                Engineering, Antenna Design, Electromagnetic Simulation,
+                Metamaterials, and THz Biosensing. My work primarily focuses on
+                electromagnetic modeling, antenna design, and metamaterial-based
+                sensing systems using CST Studio Suite, with hands-on experience
+                in antenna simulation, optimization, RF communication systems,
+                and full-wave electromagnetic analysis for aerospace, wireless
+                communication, radar, and biomedical applications.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                I have contributed to the development of telemetry antennas,
+                aerospace communication platforms, metamaterial absorbers, THz
+                biosensors, and mmWave antenna systems for radar sensing and
+                structural health monitoring. My research interests include
+                high-gain antenna arrays, metamaterial absorbers, radar sensing
+                technologies, aircraft crack detection using electromagnetic
+                techniques, and advanced RF and microwave devices.
+              </p>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                My long-term goal is to contribute to next-generation wireless
+                communication systems, radar and sensing technologies,
+                high-performance antenna arrays, electromagnetic absorbers, and
+                structural health monitoring solutions through innovative
+                research and engineering.
               </p>
               <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
                 {interests.map((item) => (
