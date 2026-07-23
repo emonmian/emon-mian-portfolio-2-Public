@@ -40,7 +40,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center gap-10 text-center lg:flex-row lg:items-center lg:gap-14 lg:text-left"
+          className="flex flex-col items-center gap-6 text-center lg:flex-row lg:items-center lg:gap-10 lg:text-left"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -48,11 +48,11 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="group relative shrink-0"
           >
-            <span className="absolute -inset-2 rounded-full bg-gradient-to-br from-primary to-accent opacity-40 blur-xl transition-opacity duration-500 group-hover:opacity-70" />
+            <span className="absolute -inset-1.5 rounded-full bg-gradient-to-br from-primary to-accent opacity-30 blur-lg transition-opacity duration-500 group-hover:opacity-50" />
             <img
               src="/profile-photo.jpg"
               alt="Md. Emon Mian, RF and Microwave Engineer"
-              className="relative h-40 w-40 rounded-full border-2 border-primary/30 object-cover object-top shadow-lg shadow-primary/20 backdrop-blur transition-transform duration-500 group-hover:scale-105 sm:h-48 sm:w-48"
+              className="relative h-24 w-24 rounded-full border border-primary/25 object-cover object-top shadow-md shadow-primary/15 backdrop-blur transition-transform duration-500 group-hover:scale-105 sm:h-28 sm:w-28"
             />
           </motion.div>
 
