@@ -40,40 +40,59 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center text-center"
+          className="flex flex-col items-center gap-10 text-center lg:flex-row lg:items-center lg:gap-14 lg:text-left"
         >
-          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 font-mono text-xs text-muted-foreground backdrop-blur">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="group relative shrink-0"
+          >
+            <span className="absolute -inset-2 rounded-full bg-gradient-to-br from-primary to-accent opacity-40 blur-xl transition-opacity duration-500 group-hover:opacity-70" />
+            <img
+              src="/profile-photo.png"
+              alt="Md. Emon Mian, RF and Microwave Engineer"
+              className="relative h-40 w-40 rounded-full border-2 border-primary/30 object-cover shadow-lg shadow-primary/20 backdrop-blur transition-transform duration-500 group-hover:scale-105 sm:h-48 sm:w-48"
+            />
+          </motion.div>
+
+          <div className="flex flex-col items-center lg:items-start">
+            <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 font-mono text-xs text-muted-foreground backdrop-blur">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+              </span>
+              Open to MSc, PhD & Graduate Research Opportunities
             </span>
-            Open to MSc, PhD & Research Collaborations
-          </span>
 
-          <h1 className="font-heading text-4xl font-bold tracking-tight text-balance sm:text-6xl md:text-7xl">
-            Md. Emon Mian
-          </h1>
+            <h1 className="font-heading text-4xl font-bold tracking-tight text-balance sm:text-6xl md:text-7xl">
+              Md. Emon Mian
+            </h1>
 
-          <div className="mt-4 flex h-8 items-center justify-center overflow-hidden sm:h-10">
-            <motion.span
-              key={roleIndex}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="gradient-text font-heading text-xl font-semibold sm:text-2xl md:text-3xl"
-            >
-              {roles[roleIndex]}
-            </motion.span>
-          </div>
+            <div className="mt-4 flex h-8 items-center justify-center overflow-hidden sm:h-10 lg:justify-start">
+              <motion.span
+                key={roleIndex}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+                className="gradient-text font-heading text-xl font-semibold sm:text-2xl md:text-3xl"
+              >
+                {roles[roleIndex]}
+              </motion.span>
+            </div>
 
-          <p className="mt-6 max-w-2xl text-pretty leading-relaxed text-muted-foreground sm:text-lg">
-            RF &amp; Hardware Design Engineer and Research Enthusiast focused on
-            Antenna Design, Metamaterials, and THz Biosensing — bridging rigorous
-            electromagnetic research with practical hardware systems.
-          </p>
+            <p className="mt-6 max-w-2xl text-pretty leading-relaxed text-muted-foreground sm:text-lg">
+              RF and Microwave Engineering enthusiast with hands-on experience in
+              antenna design, electromagnetic simulation, and metamaterial-based
+              sensing systems. Experienced in CST Studio Suite, antenna
+              optimization, RF communication, and embedded hardware integration
+              for aerospace and biomedical applications. Currently focused on
+              radar sensing, metamaterials, mmWave antennas, structural health
+              monitoring, and advanced electromagnetic research.
+            </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
             <a
               href="/cv-md-emon-mian.pdf"
               download="Md-Emon-Mian-CV.pdf"
@@ -107,6 +126,7 @@ export function Hero() {
               <Mail className="h-4 w-4 text-primary" />
               Email Me
             </a>
+            </div>
           </div>
         </motion.div>
 
