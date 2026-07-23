@@ -3,24 +3,28 @@ import {
   Radio,
   Layers,
   Microscope,
-  CircuitBoard,
+  Radar,
   Waves,
-  Plane,
-  BrainCircuit,
+  ScanSearch,
+  Cpu,
   GraduationCap,
 } from 'lucide-react'
 import { SectionHeading } from '@/components/section-heading'
 import { Reveal } from '@/components/reveal'
 
-const interests = [
+const interests: {
+  icon: typeof Radio
+  label: string
+  highlight?: boolean
+}[] = [
   { icon: Radio, label: 'RF & Microwave Engineering' },
   { icon: Antenna, label: 'Antenna Design' },
+  { icon: Cpu, label: 'CST Studio Suite', highlight: true },
+  { icon: Radar, label: 'Radar Sensing' },
   { icon: Layers, label: 'Metamaterials' },
   { icon: Microscope, label: 'THz Biosensing' },
-  { icon: CircuitBoard, label: 'PCB Design' },
+  { icon: ScanSearch, label: 'Aircraft Crack Detection' },
   { icon: Waves, label: 'Electromagnetic Simulation' },
-  { icon: Plane, label: 'Aerospace Communication' },
-  { icon: BrainCircuit, label: 'ML Assisted Sensing' },
 ]
 
 const education = [
@@ -50,8 +54,8 @@ export function About() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="About Me"
-          title="Engineering meets research"
-          description="EEE graduate from Mymensingh Engineering College, University of Dhaka — driven by a passion for advancing electromagnetic systems from theory to hardware."
+          title="Advancing Antennas, Radar & Electromagnetic Research"
+          description="RF and Research Analyst focused on antenna design, electromagnetic simulation, radar sensing, metamaterials, and next-generation wireless systems."
         />
 
         <div className="grid gap-8 lg:grid-cols-5">
@@ -63,39 +67,43 @@ export function About() {
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 I am a graduate Electrical and Electronic Engineer from
                 Mymensingh Engineering College, University of Dhaka, with
-                research and engineering experience in RF &amp; Microwave
-                Engineering, Antenna Design, Electromagnetic Simulation,
-                Metamaterials, and THz Biosensing. My work primarily focuses on
-                electromagnetic modeling, antenna design, and metamaterial-based
-                sensing systems using CST Studio Suite, with hands-on experience
-                in antenna simulation, optimization, RF communication systems,
-                and full-wave electromagnetic analysis for aerospace, wireless
-                communication, radar, and biomedical applications.
+                experience in RF &amp; Microwave Engineering, Antenna Design,
+                Electromagnetic Simulation, Metamaterials, and THz Biosensing.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                I have contributed to the development of telemetry antennas,
-                aerospace communication platforms, metamaterial absorbers, THz
-                biosensors, and mmWave antenna systems for radar sensing and
-                structural health monitoring. My research interests include
-                high-gain antenna arrays, metamaterial absorbers, radar sensing
-                technologies, aircraft crack detection using electromagnetic
-                techniques, and advanced RF and microwave devices.
+                My work focuses on antenna design, electromagnetic modeling, and
+                RF system development using CST Studio Suite. I have hands-on
+                experience in antenna simulation, optimization, telemetry
+                systems, RF communication, and full-wave electromagnetic
+                analysis for aerospace, wireless communication, radar, and
+                sensing applications.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                My long-term goal is to contribute to next-generation wireless
-                communication systems, radar and sensing technologies,
-                high-performance antenna arrays, electromagnetic absorbers, and
-                structural health monitoring solutions through innovative
-                research and engineering.
+                My research interests include high-gain antenna arrays, radar
+                sensing technologies, aircraft crack detection, metamaterial
+                absorbers, mmWave systems, and advanced RF &amp; microwave
+                devices. I aim to contribute to next-generation wireless
+                communication, radar systems, and electromagnetic sensing
+                technologies through innovative research and engineering.
               </p>
               <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
                 {interests.map((item) => (
                   <div
                     key={item.label}
-                    className="flex flex-col items-center gap-2 rounded-xl border border-border bg-card/40 p-4 text-center transition-colors hover:border-primary/40"
+                    className={
+                      item.highlight
+                        ? 'flex flex-col items-center gap-2 rounded-xl border border-primary/50 bg-gradient-to-br from-primary/15 to-accent/10 p-4 text-center shadow-[0_0_0_1px_hsl(var(--primary)/0.1)] transition-colors hover:border-primary'
+                        : 'flex flex-col items-center gap-2 rounded-xl border border-border bg-card/40 p-4 text-center transition-colors hover:border-primary/40'
+                    }
                   >
                     <item.icon className="h-6 w-6 text-primary" />
-                    <span className="text-xs leading-tight text-muted-foreground">
+                    <span
+                      className={
+                        item.highlight
+                          ? 'text-xs font-semibold leading-tight text-foreground'
+                          : 'text-xs leading-tight text-muted-foreground'
+                      }
+                    >
                       {item.label}
                     </span>
                   </div>
