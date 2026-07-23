@@ -47,7 +47,7 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
-            Available for research & engineering roles
+            Open to MSc, PhD & Research Collaborations
           </span>
 
           <h1 className="font-heading text-4xl font-bold tracking-tight text-balance sm:text-6xl md:text-7xl">
