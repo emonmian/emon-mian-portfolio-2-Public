@@ -50,9 +50,9 @@ export function Hero() {
           >
             <span className="absolute -inset-2 rounded-full bg-gradient-to-br from-primary to-accent opacity-40 blur-xl transition-opacity duration-500 group-hover:opacity-70" />
             <img
-              src="/profile-photo.png"
+              src="/profile-photo.jpg"
               alt="Md. Emon Mian, RF and Microwave Engineer"
-              className="relative h-40 w-40 rounded-full border-2 border-primary/30 object-cover shadow-lg shadow-primary/20 backdrop-blur transition-transform duration-500 group-hover:scale-105 sm:h-48 sm:w-48"
+              className="relative h-40 w-40 rounded-full border-2 border-primary/30 object-cover object-top shadow-lg shadow-primary/20 backdrop-blur transition-transform duration-500 group-hover:scale-105 sm:h-48 sm:w-48"
             />
           </motion.div>
 
